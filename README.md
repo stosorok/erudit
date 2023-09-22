@@ -1,1 +1,1 @@
-privituli
+privituli kakuli
