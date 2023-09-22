@@ -1,0 +1,36 @@
+h1 {
+    text-transform: value;
+    text-shadow: 2px 2px 3px blue;
+    font-size: 32px;
+    font-family: 'Comic Neue', cursive;
+    font-style: italic;
+    /* шо тут за хуйня робиться */
+  }
+  
+  h2{
+    font-size: 16px;
+    font-family: monospace;
+    color: purple;
+  }
+  
+  body {
+   background-image: url("https://i.ibb.co/f0Bs8Mn/Erudit.png");
+   background-size: cover;
+   background-repeat: no-repeat;
+  }
+
+video {
+  outline: 1px solid green;
+}
+
+.container {
+max-width: 600px;
+outline: 1px solid green;
+margin: 50px auto;
+}
+
+[alt="Сігафон"] {
+display: block;
+max-width: 80%;
+margin: auto;
+}
