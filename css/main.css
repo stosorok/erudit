@@ -13,12 +13,6 @@ h1 {
     color: purple;
   }
   
-  body {
-   background-image: url("https://i.ibb.co/f0Bs8Mn/Erudit.png");
-   background-size: cover;
-   background-repeat: no-repeat;
-  }
-
 video {
   outline: 1px solid green;
 }
@@ -26,7 +20,7 @@ video {
 .container {
 max-width: 600px;
 outline: 1px solid green;
-margin: 50px auto;
+margin: 0 auto;
 }
 
 [alt="Сігафон"] {
@@ -34,3 +28,15 @@ display: block;
 max-width: 80%;
 margin: auto;
 }
+
+div.app {
+  background-image: url("https://i.ibb.co/f0Bs8Mn/Erudit.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+section {
+  margin-bottom: 48px;
+}
+
