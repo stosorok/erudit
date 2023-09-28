@@ -1,42 +1,94 @@
 h1 {
-    text-transform: value;
-    text-shadow: 2px 2px 3px blue;
-    font-size: 32px;
-    font-family: 'Comic Neue', cursive;
-    font-style: italic;
-    /* шо тут за хуйня робиться */
-  }
-  
-  h2{
-    font-size: 16px;
-    font-family: monospace;
-    color: purple;
-  }
-  
+  text-transform: value;
+  text-shadow: 2px 2px 3px blue;
+  font-size: 32px;
+  font-family: "Comic Neue", cursive;
+  font-style: italic;
+  /* шо тут за хуйня робиться */
+}
+
+h2 {
+  font-size: 16px;
+  font-family: monospace;
+  color: purple;
+}
+
 video {
   outline: 1px solid green;
 }
 
+.button {
+  background-color:#0a0a23;
+  color: #fff;
+  border:none; 
+  border-radius:10px; 
+  padding:15px;
+  min-height:30px; 
+  min-width: 120px;
+}
+
+.button:hover {
+  background-color:#121241;
+  color: #fff;
+  border:none; 
+  border-radius:10px; 
+  padding:15px;
+  min-height:30px; 
+  min-width: 120px;
+}
+
+.button:disabled {
+  background-color:#343436;
+  color: #fff;
+  border:none; 
+  border-radius:10px; 
+  padding:15px;
+  min-height:30px; 
+  min-width: 120px;
+}
+
+.button:active {
+  background-color:#e7098b;
+  color: #fff;
+  border:none; 
+  border-radius:10px; 
+  padding:15px;
+  min-height:30px; 
+  min-width: 120px;
+}
+
 .container {
-max-width: 600px;
-outline: 1px solid green;
-margin: 0 auto;
+  max-width: 600px;
+  outline: 1px solid green;
+  margin: 0 auto;
 }
 
 [alt="Сігафон"] {
-display: block;
-max-width: 80%;
-margin: auto;
+  display: block;
+  max-width: 80%;
+  margin: auto;
 }
 
 div.app {
-  background-image: url("https://i.ibb.co/f0Bs8Mn/Erudit.png");
+  /*background: linear-gradient(120deg, rgba(2,0,36,1) 0%, rgba(13,232,230,1) 35%, rgba(0,212,255,1) 100%);*/
+  background-color: hsla(0, 100%, 50%, 1);
+  background-image: radial-gradient(
+      at 40% 20%,
+      hsla(28, 100%, 74%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 80% 0%, hsla(189, 100%, 56%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, hsla(355, 100%, 93%, 1) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, hsla(340, 100%, 76%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(22, 100%, 77%, 1) 0px, transparent 50%),
+    radial-gradient(at 80% 100%, hsla(242, 100%, 70%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 1) 0px, transparent 50%);
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 100vh;
+  min-height: 110vh;
+
 }
 
 section {
   margin-bottom: 48px;
 }
-
