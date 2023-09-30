@@ -13,53 +13,52 @@ h2 {
   color: purple;
 }
 
-video {
+/* video {
   outline: 1px solid green;
-}
+} */
 
 .button {
-  background-color:#0a0a23;
+  background-color: #0a0a23;
   color: #fff;
-  border:none; 
-  border-radius:10px; 
-  padding:15px;
-  min-height:30px; 
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  min-height: 30px;
   min-width: 120px;
 }
 
 .button:hover {
-  background-color:#121241;
+  background-color: #121241;
   color: #fff;
-  border:none; 
-  border-radius:10px; 
-  padding:15px;
-  min-height:30px; 
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  min-height: 30px;
   min-width: 120px;
 }
 
 .button:disabled {
-  background-color:#343436;
+  background-color: #343436;
   color: #fff;
-  border:none; 
-  border-radius:10px; 
-  padding:15px;
-  min-height:30px; 
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  min-height: 30px;
   min-width: 120px;
 }
 
-.button:active {
-  background-color:#e7098b;
+.button:active:not(:disabled) {
+  background-color: #e7098b;
   color: #fff;
-  border:none; 
-  border-radius:10px; 
-  padding:15px;
-  min-height:30px; 
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  min-height: 30px;
   min-width: 120px;
 }
 
 .container {
   max-width: 600px;
-  outline: 1px solid green;
   margin: 0 auto;
 }
 
@@ -86,9 +85,47 @@ div.app {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 110vh;
-
 }
 
 section {
   margin-bottom: 48px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  height: 150px;
+}
+
+.card {
+  border-left: 4px solid #ffffff;
+  line-height: 180px;
+  font-weight: 700;
+  background-color: rgb(59, 228, 26);
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 2em;
+}
+
+.card:first-child {
+  border-left: 0;
+}
+
+.card.one {
+  flex: auto;
+}
+
+.card.two {
+  flex: auto;
+}
+
+.card.three {
+  flex: auto;
+}
+
+.center {
+  gap: 30px;
+  display: flex;
+  justify-content: center;
 }
