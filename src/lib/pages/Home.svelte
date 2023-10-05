@@ -1,7 +1,11 @@
+<script>
+  import imgSrc from "../../assets/sigafon.png";
+</script>
+
 <div class="container">
   <section>
     <h1>👋 Erudit Sigafon</h1>
-    <img src="https://i.ibb.co/mRQ00gH/image.png" alt="Сігафон" />
+    <img src={imgSrc} alt="Сігафон" />
 
     <div class="center">
       <a href="pages/info.html"
@@ -34,7 +38,7 @@
     <input type="password" name="password" placeholder="Введіть ваш пароль" />
 
     <button type="button">
-      <a href="/info">жмать сюда</a>
+      <a href="#/info">жмать сюда</a>
     </button>
 
     <input type="color" />

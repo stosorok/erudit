@@ -1,7 +1,12 @@
 <script>
-  import { Router, Route } from "svelte-routing";
+  import Router from "svelte-spa-router";
   import Home from "./lib/pages/Home.svelte";
   import Info from "./lib/pages/Info.svelte";
+
+  const routes = {
+    "/": Home,
+    "/info": Info,
+  };
 </script>
 
 <svelte:head>
@@ -15,7 +20,6 @@
   <meta property="og:type" content="website" />
 </svelte:head>
 
-<Router>
-  <Route path="/" component={Home} />
-  <Route path="/info" component={Info} />
-</Router>
+<div class="app">
+  <Router {routes} />
+</div>

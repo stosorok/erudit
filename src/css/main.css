@@ -4,7 +4,6 @@ h1 {
   font-size: 32px;
   font-family: "Comic Neue", cursive;
   font-style: italic;
-  /* шо тут за хуйня робиться */
 }
 
 h2 {
@@ -12,10 +11,6 @@ h2 {
   font-family: monospace;
   color: purple;
 }
-
-/* video {
-  outline: 1px solid green;
-} */
 
 .button {
   background-color: #0a0a23;
@@ -69,7 +64,6 @@ h2 {
 }
 
 div.app {
-  /*background: linear-gradient(120deg, rgba(2,0,36,1) 0%, rgba(13,232,230,1) 35%, rgba(0,212,255,1) 100%);*/
   background-color: hsla(0, 100%, 50%, 1);
   background-image: radial-gradient(
       at 40% 20%,
@@ -82,71 +76,11 @@ div.app {
     radial-gradient(at 0% 100%, hsla(22, 100%, 77%, 1) 0px, transparent 50%),
     radial-gradient(at 80% 100%, hsla(242, 100%, 70%, 1) 0px, transparent 50%),
     radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 1) 0px, transparent 50%);
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 110vh;
+  min-height: 100vh;
 }
 
-section {
+section:not(:last-child) {
   margin-bottom: 48px;
-}
-
-.cards {
-  outline: 1px solid red;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 24px;
-  min-height: 150px;
-}
-
-.gap {
-  gap: 24px;
-  display: flex;
-  flex-direction: column;
-}
-
-.cards-center {
-  justify-content: center;
-}
-
-.cards-between {
-  justify-content: space-between;
-}
-
-.cards-around {
-  justify-content: space-around;
-}
-
-.card {
-  outline: 1px solid green;
-  width: 180px;
-  line-height: 1.2;
-  min-height: 150px;
-  font-weight: 700;
-  background-color: rgb(59, 228, 26);
-  text-align: center;
-  font-size: 2em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.card:first-child {
-  border-left: 0;
-}
-
-.card.one {
-  flex: auto;
-}
-
-.card.two {
-  flex: auto;
-}
-
-.card.three {
-  flex: auto;
 }
 
 .center {
