@@ -1,11 +1,7 @@
-<script>
-  import imgSrc from "../../assets/sigafon.png";
-</script>
-
 <div class="container">
   <section>
     <h1>👋 Erudit Sigafon</h1>
-    <img src={imgSrc} alt="Сігафон" />
+    <img src="https://i.ibb.co/mRQ00gH/image.png" alt="Сігафон" />
 
     <div class="center">
       <a href="pages/info.html"
