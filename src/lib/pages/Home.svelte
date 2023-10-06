@@ -1,7 +1,12 @@
+<script>
+  import HeroSlider from "../components/HeroSlider.svelte";
+</script>
+
 <div class="container">
   <section>
     <h1>👋 Erudit Sigafon</h1>
-    <img src="https://i.ibb.co/mRQ00gH/image.png" alt="Сігафон" />
+
+    <HeroSlider />
 
     <div class="center">
       <a href="pages/info.html"
