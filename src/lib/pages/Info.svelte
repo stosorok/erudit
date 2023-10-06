@@ -82,16 +82,4 @@
   .card:first-child {
     border-left: 0;
   }
-
-  .card.one {
-    flex: auto;
-  }
-
-  .card.two {
-    flex: auto;
-  }
-
-  .card.three {
-    flex: auto;
-  }
 </style>
