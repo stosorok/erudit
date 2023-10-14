@@ -38,7 +38,7 @@
       type: "loop",
     }).mount();
 
-    splideEl.on("moved", (index) => {
+    splideEl.on("move", (index) => {
       const className =
         index === 0
           ? "hero--first"
