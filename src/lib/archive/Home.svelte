@@ -4,10 +4,12 @@
     <img src="https://i.ibb.co/mRQ00gH/image.png" alt="Сігафон" />
 
     <div class="center">
-      <a href="pages/info.html"
-        ><button class="button" disabled>Click 1</button></a
-      >
-      <a href="pages/info.html"><button class="button">Click 2</button></a>
+      <a href="pages/info.html">
+        <button class="button" disabled>Click 1</button>
+      </a>
+      <a href="pages/info.html">
+        <button class="button">Click 2</button>
+      </a>
     </div>
 
     <h2>Опис</h2>
