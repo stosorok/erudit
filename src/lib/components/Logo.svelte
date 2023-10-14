@@ -33,10 +33,10 @@
 </svg>
 
 <style>
-  svg {
+  /* svg {
     display: block;
     margin: auto;
-  }
+  } */
 
   svg.animated {
     filter: drop-shadow(0 0 0 rgba(0, 0, 0, 1));
