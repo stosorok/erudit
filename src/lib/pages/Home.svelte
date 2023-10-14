@@ -27,10 +27,10 @@
 </div>
 
 <style>
-.hero-buttons {
-display: flex;
-flex-wrap: wrap;
-gap: 10px;
+  .hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
   }
 
   .logo {
@@ -45,21 +45,25 @@ gap: 10px;
     margin-bottom: 50px;
   }
   .hero {
-    background: linear-gradient(129deg, #F782A4 11.86%, #FB8A83 95.39%);
-    padding-top: 20px;
-    padding-bottom: 35px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .hero.hero--second {
+  }
+  .hero.hero--third {
   }
   .conteiner {
     /* outline: 1px solid #234; */
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 1240px;
     padding-inline: 32px;
   }
   .row {
     /* outline: 1px solid #234; */
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between;
     gap: 50px;
   }
@@ -67,10 +71,13 @@ gap: 10px;
     /* background: #234; */
     /* width: 540px; */
     /* height: 530px; */
+    flex-grow: 1;
   }
   .hero-right {
     /* background: #0c0; */
-    width: 320px;
-
+    /* max-width: 550px; */
+    /* margin: auto; */
+    flex-basis: 40%;
+    flex-grow: 1;
   }
 </style>
