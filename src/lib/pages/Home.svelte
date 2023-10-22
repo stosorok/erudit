@@ -15,8 +15,12 @@
           <p>Унікальний пристрій на ринку мобільних телефонів</p>
         </div>
         <div class="hero-buttons">
-          <Button secondary>Про Сігафон</Button>
-          <Button>Придбати в 1 клік</Button>
+          <a href="#/info">
+            <Button secondary>Про Сігафон</Button>
+          </a>
+          <a href="#/info">
+            <Button>Придбати в 1 клік</Button>
+          </a>
         </div>
       </div>
       <div class="hero-right">
