@@ -2,9 +2,9 @@
   export let secondary = false;
 </script>
 
-  <button class="button {secondary ? 'secondary' : 'primary'}">
-    <slot />
-  </button>
+<button class="button {secondary ? 'secondary' : 'primary'}">
+  <slot />
+</button>
 
 <style>
 
