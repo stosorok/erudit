@@ -3,6 +3,8 @@
   import Logo from "../components/Logo.svelte";
   import Button from "../components/Button.svelte";
   import Headline from "../components/Headline.svelte";
+  import AboutInfo from "../components/AboutInfo.svelte";
+  import AboutVideo from "../components/AboutVideo.svelte";
 </script>
 
 <div class="hero">
@@ -11,12 +13,12 @@
       <div class="hero-left">
         <div class="logo"><Logo width="70px" /></div>
         <div class="headline"><Headline>Erudit Sigafon</Headline></div>
-        <div class="about">
+        <div class="hero-about">
           <p>Унікальний пристрій на ринку мобільних телефонів</p>
         </div>
         <div class="hero-buttons">
-          <Button secondary>Про Сігафон</Button>
-          <Button>Придбати в 1 клік</Button>
+          <a href="#/info"><Button secondary>Про Сігафон</Button></a>
+          <a href="#/info"><Button>Придбати в 1 клік</Button></a>
         </div>
       </div>
       <div class="hero-right">
@@ -26,7 +28,25 @@
   </div>
 </div>
 
+<div class="about">
+  <div class="conteiner">
+    <div class="row">
+      <div class="about-video">
+        <AboutVideo/>
+      </div>
+      <div class="about-info">
+      <AboutInfo/>
+    </div>
+    </div>
+  </div>
+</div>
+
 <style>
+.about {
+padding: 50px 0px;
+}
+
+
   .hero-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -36,7 +56,7 @@
   .logo {
     margin-bottom: 50px;
   }
-  .about {
+  .hero-about {
     color: azure;
     margin-bottom: 50px;
   }

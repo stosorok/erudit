@@ -2,13 +2,17 @@
   export let secondary = false;
 </script>
 
-<a href="pages/info.html">
   <button class="button {secondary ? 'secondary' : 'primary'}">
     <slot />
   </button>
-</a>
 
 <style>
+
+.button {
+text-transform: uppercase;
+font-weight: bold;
+}
+
   .primary {
     background-color: rgba(254, 63, 63, 1);
     color: #fff;

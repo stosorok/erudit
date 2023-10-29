@@ -1,85 +1,96 @@
-<div class="gap">
-  <div class="cards cards-center">
-    <div class="card">
-      <p>1</p>
-    </div>
-    <div class="card">
-      <p>2</p>
-    </div>
-    <div class="card">
-      <p>3</p>
-    </div>
-  </div>
+<div class="container">
+  <div class="block one" />
+  <div class="block two" />
+  <div class="block tree" />
+</div>
 
-  <div class="cards cards-between">
-    <div class="card">
-      <p>1</p>
-    </div>
-    <div class="card">
-      <p>2</p>
-    </div>
-    <div class="card">
-      <p>3</p>
-    </div>
-  </div>
+<div class="container end">
+  <div class="block one" />
+  <div class="block two" />
+  <div class="block tree" />
+</div>
 
-  <div class="cards cards-around">
-    <div class="card">
-      <p>1</p>
-    </div>
-    <div class="card">
-      <p>2</p>
-    </div>
-    <div class="card">
-      <p>3</p>
-    </div>
-  </div>
+<div class="container center">
+  <div class="block one" />
+  <div class="block two" />
+  <div class="block tree" />
+</div>
+
+<div class="container between">
+  <div class="block one" />
+  <div class="block two" />
+  <div class="block tree" />
+</div>
+
+<div class="container around">
+  <div class="block one" />
+  <div class="block two" />
+  <div class="block tree" />
+</div>
+
+<div class="container evenly">
+  <div class="block one" />
+  <div class="block two" />
+  <div class="block tree" />
 </div>
 
 <style>
-  .cards {
-    outline: 1px solid red;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
+  .container {
+    transition: 350ms;
     flex-wrap: wrap;
-    gap: 24px;
-    min-height: 150px;
-  }
-
-  .gap {
-    gap: 24px;
     display: flex;
-    flex-direction: column;
+    background-color: #ded2e8;
+    margin: 0 auto 15px auto;
+    max-width: 600px;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 12px;
+    border: 2px solid #6a2996;
+    box-shadow: inset 5px 5px #ffffff, 5px 5px #ded2e8;
+  
   }
 
-  .cards-center {
-    justify-content: center;
+  .container:hover {
+  background-color: #d7c6e6;
+  gap: 75px;
   }
 
-  .cards-between {
+  .block:hover {
+  border: 5px solid #672296;
+  }
+
+  .container.between {
     justify-content: space-between;
   }
 
-  .cards-around {
+  .container.around {
     justify-content: space-around;
   }
 
-  .card {
-    outline: 1px solid green;
-    width: 180px;
-    line-height: 1.2;
-    min-height: 150px;
-    font-weight: 700;
-    background-color: rgb(59, 228, 26);
-    text-align: center;
-    font-size: 2em;
-    display: flex;
-    align-items: center;
+  .container.evenly {
+    justify-content: space-evenly;
+  }
+
+  .container.center {
     justify-content: center;
   }
 
-  .card:first-child {
-    border-left: 0;
+  .container.end {
+    justify-content: flex-end;
+  }
+
+  .block {
+    box-sizing: border-box;
+    transition: 220ms;
+    width: 150px;
+    height: 70px;
+    background-color: #a17ebb;
+    border-radius: 8px;
+    border: 2px solid #6a2996;
+  }
+
+  .block.two {
+    width: 50px;
   }
 </style>
