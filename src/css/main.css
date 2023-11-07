@@ -1,17 +1,24 @@
-.hero {
-    background: linear-gradient(45deg, #ffcc33, #ff6666, #9933ff, #33cc33);
-    background-size: 400% 400%;
-    transition: background-position 0.3s ease-in-out;
+.container {
+    margin: 0 auto;
+    max-width: 1240px;
+    padding-inline: 32px;
+  }
+
+.hero--third .hero {
+    background-position: 100% 0;
 }
 
-.hero.hero--first {
+.hero--second .hero {
+    background-position: 75% 0;
+}
+
+.hero--first .hero {
     background-position: 50% 0;
 }
 
-.hero.hero--second {
-    background-position: 0 0;
-}
-
-.hero.hero--third {
-    background-position: 100% 0;
+.hero {
+    background: linear-gradient(45deg, #ffcc33, #ff6666, #9933ff, #33cc33);
+    background-size: 400% 400%;
+    background-attachment: fixed;
+    transition: background-position 0.3s ease-in-out;
 }

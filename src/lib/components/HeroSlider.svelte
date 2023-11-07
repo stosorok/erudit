@@ -30,7 +30,7 @@
   };
 
   onMount(() => {
-    hero = document.querySelector(".hero");
+    hero = document.querySelector("[id='app']");
 
     swapClass(hero, "", "hero--first");
 

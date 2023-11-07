@@ -3,11 +3,13 @@
   import Home from "./lib/pages/Home.svelte";
   import Info from "./lib/pages/Info.svelte";
   import Animation from "./lib/pages/Animation.svelte";
+  import Api from "./lib/pages/Api.svelte";
 
   const routes = {
     "/": Home,
     "/info": Info,
     "/animation": Animation,
+    "/api/*": Api,
   };
 </script>
 
