@@ -2,10 +2,12 @@
   import Router from "svelte-spa-router";
   import Home from "./lib/pages/Home.svelte";
   import Info from "./lib/pages/Info.svelte";
+  import Animation from "./lib/pages/Animation.svelte";
 
   const routes = {
     "/": Home,
     "/info": Info,
+    "/animation": Animation,
   };
 </script>
 

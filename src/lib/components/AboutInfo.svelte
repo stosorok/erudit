@@ -5,7 +5,7 @@
 <div class="info">
   <div class="title">Зручно та елегантно!</div>
   <ul class="list">
-    <li>Oснащений блоком який поміщайє в собі 3 сигарети</li>
+    <li><span>Oснащений блоком який поміщайє в собі 3 сигарети</span></li>
     <li>Tактильно приємний затвор для видачі сигарет з вібрацією</li>
     <li>Вбудована запальничка у верхній частині корпусу</li>
   </ul>
@@ -13,20 +13,25 @@
 </div>
 
 <style>
-li::marker {
-    opacity: 0.3;
-}
-li {
-    list-style-position: initial;
-    list-style: url('../../assets/list.png');
-    margin-bottom: 5px;
+  li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
     outline: 1px solid #f783a2;
-}
+    position: relative;
+    padding-left: 25px;
+  }
+
+  .list li::before {
+    content: url("../../assets/list.png");
+    position: absolute;
+    left: 0;
+  }
 
   .list {
     margin-bottom: 20px;
-    
   }
+
   .info {
   }
 
