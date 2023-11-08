@@ -1,20 +1,29 @@
 <script>
   import { location } from "svelte-spa-router";
   import { onMount } from "svelte";
+  import { flip } from "svelte/animate";
+  import { fade } from "svelte/transition";
+  import ApiItem from "../components/ApiItem.svelte";
 
-  const id = $location.split("/").pop();
+  const apiType = $location.split("/").pop();
   let apiMap = {};
 
   onMount(async () => {
-    apiMap = (await import(`../../assets/api/${id}.json`)).default;
+    apiMap = (await import(`../../assets/api/${apiType}.json`)).default;
   });
+
+  $: items = Object.entries(apiMap).map(([key, value]) => ({
+    name: key,
+    description: value,
+  }));
 </script>
 
 <div>
-  {#each Object.entries(apiMap) as [key, value]}
-    <div>
-      <h2>{key}</h2>
-      <p style="margin-bottom: 40px;">{value}</p>
+  <h1>{apiType}</h1>
+
+  {#each items as item (item.name)}
+    <div in:fade animate:flip={{ duration: 200 }}>
+      <ApiItem {item} />
     </div>
   {/each}
 </div>
