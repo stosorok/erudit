@@ -1,29 +1,44 @@
-<script>
+<script lang="ts">
   import { location } from "svelte-spa-router";
-  import { onMount } from "svelte";
-  import { flip } from "svelte/animate";
-  import { fade } from "svelte/transition";
+  import links from "../../assets/links";
   import ApiItem from "../components/ApiItem.svelte";
 
-  const apiType = $location.split("/").pop();
-  let apiMap = {};
+  let items = [];
+  let query = "";
 
-  onMount(async () => {
-    apiMap = (await import(`../../assets/api/${apiType}.json`)).default;
-  });
+  const fetchApi = async (apiType: string) => {
+    const api = await import(`../../assets/api/${apiType}.json`);
 
-  $: items = Object.entries(apiMap).map(([key, value]) => ({
-    name: key,
-    description: value,
-  }));
+    items = Object.entries(api.default).map(([key, value]) => ({
+      name: key,
+      description: value,
+    }));
+  };
+
+  $: apiType = $location.split("/").pop();
+  $: fetchApi(apiType);
+  $: filteredItems = items.filter(({ name }) =>
+    name.toLowerCase().includes(query.toLowerCase())
+  );
 </script>
 
 <div>
-  <h1>{apiType}</h1>
+  <aside>
+    {#each links as link}
+      <div>
+        <a href="#/api/{link}">Api {link}</a>
+      </div>
+    {/each}
+  </aside>
 
-  {#each items as item (item.name)}
-    <div in:fade animate:flip={{ duration: 200 }}>
+  <main>
+    <header>
+      <h1>{apiType}</h1>
+      <input type="text" bind:value={query} placeholder="search" />
+    </header>
+
+    {#each filteredItems as item (item.name)}
       <ApiItem {item} />
-    </div>
-  {/each}
+    {/each}
+  </main>
 </div>

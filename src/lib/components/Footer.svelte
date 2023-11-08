@@ -1,5 +1,6 @@
 <script>
   import Headline from "./Headline.svelte";
+  import links from "../../assets/links";
 </script>
 
 <footer class="hero">
@@ -12,16 +13,9 @@
 
     <div class="links">
       <Headline style="min-width: 200px;">Навчаємось з Ерудитом</Headline>
-      <a href="#/api/descriptions">Api descriptions</a>
-      <a href="#/api/xhr">Api xhr</a>
-      <a href="#/api/websockets">Api websockets</a>
-      <a href="#/api/streams">Api streams</a>
-      <a href="#/api/html">Api html</a>
-      <a href="#/api/fullscreen">Api fullscreen</a>
-      <a href="#/api/fetch">Api fetch</a>
-      <a href="#/api/encoding">Api encoding</a>
-      <a href="#/api/dom">Api dom</a>
-      <a href="#/api/indexedDB">Api IndexedDB</a>
+      {#each links as link}
+        <a href="#/api/{link}">Api {link}</a>
+      {/each}
     </div>
   </div>
 </footer>
