@@ -1,7 +1,8 @@
 <script lang="ts">
   import { location } from "svelte-spa-router";
   import links from "../../assets/links";
-  import ApiItem from "../components/ApiItem.svelte";
+  import ApiItem from "../components/api/ApiItem.svelte";
+  import ApiLink from "../components/api/ApiLink.svelte";
 
   let items = [];
   let query = "";
@@ -25,9 +26,7 @@
 <div>
   <aside>
     {#each links as link}
-      <div>
-        <a href="#/api/{link}">Api {link}</a>
-      </div>
+      <ApiLink {link} />
     {/each}
   </aside>
 
@@ -42,3 +41,9 @@
     {/each}
   </main>
 </div>
+
+<style>
+  :root {
+    --api-dark: #2b2b2b;
+  }
+</style>
