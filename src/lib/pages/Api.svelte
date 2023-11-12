@@ -3,6 +3,7 @@
   import links from "../../assets/links";
   import ApiItem from "../components/api/ApiItem.svelte";
   import ApiLink from "../components/api/ApiLink.svelte";
+  import ApiSearch from "../components/api/ApiSearch.svelte";
 
   let items = [];
   let query = "";
@@ -23,17 +24,17 @@
   );
 </script>
 
-<div>
-  <aside>
+<div class="font-inter">
+  <aside class="font-inter">
     {#each links as link}
-      <ApiLink {link} />
+      <ApiLink {link} active={link === apiType} />
     {/each}
   </aside>
 
   <main>
     <header>
       <h1>{apiType}</h1>
-      <input type="text" bind:value={query} placeholder="search" />
+      <ApiSearch {query} />
     </header>
 
     {#each filteredItems as item (item.name)}

@@ -3,7 +3,7 @@
 </script>
 
 <div class="video">
-  <video {src} autoplay loop />
+  <video {src} autoplay loop muted />
 </div>
 
 <style>
