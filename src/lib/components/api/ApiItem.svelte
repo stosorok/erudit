@@ -8,7 +8,7 @@
 </script>
 
 {#if item}
-  <div style="margin-bottom: 60px;" in:fade>
+  <div in:fade>
     <span>{item.name}</span>
     <span>{item.description}</span>
   </div>
