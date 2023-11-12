@@ -4,7 +4,7 @@
   export let item: {
     name: string;
     description: string;
-  } | null = null;
+  };
 </script>
 
 {#if item}

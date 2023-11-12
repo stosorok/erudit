@@ -1,9 +1,10 @@
 <script lang="ts">
-  import { location } from "svelte-spa-router";
   import links from "../../assets/links";
   import ApiItem from "../components/api/ApiItem.svelte";
   import ApiLink from "../components/api/ApiLink.svelte";
   import ApiSearch from "../components/api/ApiSearch.svelte";
+
+  export let params: { wild: string };
 
   let items = [];
   let query = "";
@@ -17,7 +18,7 @@
     }));
   };
 
-  $: apiType = $location.split("/").pop();
+  $: apiType = params.wild;
   $: fetchApi(apiType);
   $: filteredItems = items.filter(({ name }) =>
     name.toLowerCase().includes(query.toLowerCase())
@@ -34,7 +35,7 @@
   <main>
     <header>
       <h1>{apiType}</h1>
-      <ApiSearch {query} />
+      <ApiSearch bind:query />
     </header>
 
     {#each filteredItems as item (item.name)}
