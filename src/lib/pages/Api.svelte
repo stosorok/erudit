@@ -26,7 +26,7 @@
 </script>
 
 <div class="font-inter">
-  <aside class="font-inter">
+  <aside>
     {#each links as link}
       <ApiLink {link} active={link === apiType} />
     {/each}
